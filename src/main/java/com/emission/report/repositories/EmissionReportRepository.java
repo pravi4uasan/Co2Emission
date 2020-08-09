@@ -1,5 +1,7 @@
 package com.emission.report.repositories;
 
-public interface EmissionReportRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface EmissionReportRepository extends JpaRepository<Object, Object> {
 
 }

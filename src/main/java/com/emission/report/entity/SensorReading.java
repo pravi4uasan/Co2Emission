@@ -30,10 +30,7 @@ public class SensorReading {
 	private int id;
 	
 	@Column(name="SENSORREADING_CO2READING")
-	private double sensorName;
-	
-	@Column(name="SENSORREADING_LOCATION")
-	private String sensorLocation;
+	private double sensorReading;
 	
 
 	@Column(name="SENSORREADING_DATETIME")
