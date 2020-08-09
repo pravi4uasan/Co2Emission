@@ -1,0 +1,43 @@
+{
+  "Report": {
+    "firstName": "John",
+    "lastName": "Snow",
+    "email": "snow@gmail.com",
+    "city": {
+      "name": "city1",
+      "countryName": "Gemany",
+      "districts": [
+        {
+          "districtName": "dist1",
+          "sensorDetail": [
+            {
+              "sensorName": "sens1",
+              "sensorLocation": "location1",
+              "SensorReading": [
+                {
+                  "sensorReading": 22.22,
+                  "sensorDateTime": "2019-7-15 15:30:14.332"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "districtName": "dist2",
+          "sensorDetail": [
+            {
+              "sensorName": "sens2",
+              "sensorLocation": "location2",
+              "SensorReading": [
+                {
+                  "sensorReading": 33.22,
+                  "sensorDateTime": "2019-7-15 15:30:14.332"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
