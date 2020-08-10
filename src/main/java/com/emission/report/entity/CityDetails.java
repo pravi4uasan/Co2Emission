@@ -38,7 +38,7 @@ public class CityDetails {
 	@Column(name="COUNTRY_NAME")
 	private String countryName;
 	
-	@OneToOne(mappedBy="CityDetails", cascade=CascadeType.ALL)
+	@OneToOne(mappedBy="cityDetails", cascade=CascadeType.ALL)
 	private CustomerDetails customerDetails;
 	
 	@OneToMany(mappedBy="CITYDETAILS",
