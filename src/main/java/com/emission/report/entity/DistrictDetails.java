@@ -38,12 +38,20 @@ public class DistrictDetails {
 	
 	@ManyToOne(cascade= {CascadeType.PERSIST, CascadeType.MERGE,
 			 CascadeType.DETACH, CascadeType.REFRESH})
-    @JoinColumn(name="CITYDETAILS_ID")
+    @JoinColumn(name="CITY_DETAILS_ID")
     private CityDetails cityDetails;
 	
-	@OneToMany(mappedBy="DISTRICTDETAILS",
-			   cascade= {CascadeType.PERSIST, CascadeType.MERGE,
-						 CascadeType.DETACH, CascadeType.REFRESH})
-	private List<SensorDetail> sensorDetailList;
+	
+	  @OneToMany(mappedBy="districtDetails", cascade= {CascadeType.PERSIST,
+	  CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH}) private
+	  List<SensorDetail> sensorDetailList;
+	 
+	
+	/*
+	 * @OneToMany(targetEntity = SensorDetail.class, cascade = CascadeType.ALL)
+	 * 
+	 * @JoinColumn(name = "district_id", referencedColumnName = "id") private
+	 * List<SensorDetail> sensorDetailList;
+	 */
 
 }

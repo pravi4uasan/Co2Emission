@@ -41,7 +41,7 @@ public class CustomerDetails {
 	private String email;
 	
 	@OneToOne(cascade=CascadeType.ALL)
-	@JoinColumn(name="CITYDETAILS_ID")
+	@JoinColumn(unique = true)
 	private CityDetails cityDetails;
 	
 	

@@ -1,7 +1,10 @@
 package com.emission.report.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.emission.report.entity.CustomerDetails;
@@ -13,8 +16,14 @@ public class EmissionReportController {
 	@Autowired
 	private EmissionReportService service;
 	
-	@PostMapping("/sensorData")
-	public void addEmissionData(CustomerDetails req) {
+	@GetMapping(value = "/sensorData1")
+	public String Test() {
+		return "HelloWorld";
+	}
+	
+	@PostMapping(value="/sensorData" ,produces = MediaType.APPLICATION_JSON_VALUE ,
+			consumes = MediaType.APPLICATION_JSON_VALUE)
+	public void addEmissionData(@RequestBody CustomerDetails req) {
 		
 		service.addEmissionData(req);
 		

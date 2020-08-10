@@ -8,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
@@ -41,10 +42,18 @@ public class CityDetails {
 	@OneToOne(mappedBy="cityDetails", cascade=CascadeType.ALL)
 	private CustomerDetails customerDetails;
 	
-	@OneToMany(mappedBy="CITYDETAILS",
-			   cascade= {CascadeType.PERSIST, CascadeType.MERGE,
-						 CascadeType.DETACH, CascadeType.REFRESH})
-	private List<DistrictDetails> districtDetailsList;
+	
+	  @OneToMany(mappedBy="cityDetails", cascade= {CascadeType.PERSIST,
+	  CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH}) private
+	  List<DistrictDetails> districtDetails;
+	 
+	
+	/*
+	 * @OneToMany(targetEntity = DistrictDetails.class, cascade = CascadeType.ALL)
+	 * 
+	 * @JoinColumn(name = "city_id", referencedColumnName = "id") private
+	 * List<DistrictDetails> districtDetails;
+	 */
 	
 	
 }
