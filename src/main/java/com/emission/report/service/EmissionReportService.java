@@ -1,5 +1,9 @@
 package com.emission.report.service;
 
-public interface EmissionReportService {
+import com.emission.report.entity.CustomerDetails;
 
+public interface EmissionReportService {
+	
+	public void addEmissionData(CustomerDetails req);
+	
 }
